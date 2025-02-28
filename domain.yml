@@ -1,0 +1,42 @@
+version: "3.1"
+
+intents:
+  - greet
+  - check_opening_hours
+  - check_opening_hours_days
+  - ask_menu
+  - order_food
+  - say_goodbye
+
+entities:
+  - day
+  - meal
+
+slots:
+  day:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: day
+
+  meal:
+    type: list
+    mappings:
+      - type: from_entity
+        entity: meal
+
+responses:
+  utter_greet:
+    - text: "Welcome to our restaurant, how can I help you?"
+
+  utter_goodbye:
+    - text: "Goodbye! We wish you a wonderful day and hope to see you again!"
+
+  utter_order_confirmation:
+    - text: "Your order has been received! We are preparing it for you."
+
+actions:
+    - action_get_opening_hours
+    - action_get_opening_hours_days
+    - action_display_menu
+    - action_place_order
