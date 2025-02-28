@@ -1,0 +1,52 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - good morning
+    - good afternoon
+    - good evening
+    - hi there
+
+- intent: check_opening_hours
+  examples: |
+    - What are your opening hours?
+    - When do you open and close?
+    - Can I come tomorrow at 6 PM?
+    - Until what time are you open?
+    - Could you tell me your opening hours?
+
+- intent: check_opening_hours_days
+  examples: |
+    - What time do you open on [Monday](day)?
+    - What are your opening hours on [Monday](day)?
+    - Until what time are you open on [Tuesday](day)?
+    - Could you tell me your opening hours on [Friday](day)?
+    - On which days are you open?
+
+- intent: ask_menu
+  examples: |
+    - What do you have on the menu?
+    - What dishes do you offer?
+    - Can I see your menu?
+    - What are the prices of your meals?
+
+- intent: order_food
+  examples: |
+    - I want to order a [pizza](meal).
+    - I'd like a [burger](meal).
+    - Do you serve [pizza](meal)?
+    - Can I get one [spaghetti](meal)?
+    - I'll have a [pizza](meal) and a [burger](meal).
+    - I'd like to order a [tiramisu](meal).
+
+- intent: say_goodbye
+  examples: |
+    - goodbye
+    - bye
+    - see you soon
+    - see you
+    - ciao
+    - see you later
